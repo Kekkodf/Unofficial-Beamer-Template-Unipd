@@ -1,0 +1,121 @@
+\documentclass[12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Warsaw}
+\definecolor{darkred}{RGB}{155,0,20}
+\setbeamercolor{structure}{fg=darkred}
+\usepackage{tikz}
+\usepackage{appendix}
+\usepackage[labelformat=empty]{caption}
+\usepackage{hyperref}
+\usepackage{footmisc}
+\footnotemargin=3pt\relax
+
+\setbeamertemplate{bibliography item}[text]
+
+%Contents signed as bullets
+\setbeamertemplate{section in toc}{\leavevmode\leftskip=1.75ex%
+  \llap{%
+    \usebeamerfont*{section number projected}%
+    \usebeamercolor[bg]{section number projected}%
+    \textbullet% or whatever
+    \hskip-2.25ex%
+    \hbox to2.25ex{\hfil\color{fg}\hfil}}%
+  \kern1.25ex\inserttocsection\par}
+  
+%Navigation Bar
+\defbeamertemplate*{footline}{shadow theme}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\hfill\insertshortauthor%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hfill\insertpagenumber\,/\,\inserttotalframenumber%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%Info about us <3
+\title{Title}
+\subtitle{Subtitle}
+\author[De Faveri Francesco Luigi]{De Faveri Francesco Luigi}
+\date{11.01.1999}
+
+%documents
+\begin{document}
+
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%Unipd logo
+\addtobeamertemplate{headline}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node at([shift={(.35\paperwidth,-.65)}]current page.north) {\includegraphics[height=1cm,width=2.2cm]{unipd_logo_white.png}}; %h=1cm w=2cm unipd_logo_black.png
+                                                                  %h=1cm w=2.2cm unipd_logo_white.png
+\end{tikzpicture}}
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+
+\maketitle
+
+\begin{frame}{Contents}
+		\tableofcontents %
+\end{frame}
+
+\section{Section 1}
+
+\begin{frame}{Title}
+
+\end{frame}
+
+\begin{frame}{Title}
+\end{frame}
+
+\begin{frame}{Title}
+    
+\end{frame}
+
+\section{Section 2}
+\begin{frame}{Title}
+    
+\end{frame}
+
+\section{Section 3}
+\begin{frame}{Title}
+    
+\end{frame}
+
+\section{Section 4}
+\begin{frame}{Title}
+    
+\end{frame}
+
+\section*{Conclusions}
+\begin{frame}{Conclusions}
+    
+\end{frame}
+
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%\appendix
+%\section*{References}
+%\begin{frame}[noframenumbering, allowframebreaks]{References}
+%    \bibliographystyle{ieeetr}
+%    \bibliography{references.bib}
+%\end{frame}
+
+%\section*{Backup Slides}
+%\begin{frame}[noframenumbering]{Backup Slides}
+%\begin{center}
+%    \textbf{Backup Slides}
+%\end{center}
+%\end{frame}
+
+%\begin{frame}[noframenumbering]{Backup Slides}
+%\begin{center}
+
+%\end{center}
+%\end{frame}
+
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+\end{document}
